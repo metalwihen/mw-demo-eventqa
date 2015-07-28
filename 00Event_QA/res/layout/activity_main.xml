@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff" >
+
+        <EditText
+            android:id="@+id/itemToAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/acceptText"
+            android:background="#00000000"
+            android:ems="10"
+            android:hint="@string/question_text"
+            android:imeOptions="actionDone"
+            android:padding="20dp"
+            android:singleLine="true"
+            android:textSize="16sp" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/acceptText"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@+id/itemToAdd"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_white"
+            android:text=" ASK "
+            android:textSize="16sp" >
+        </Button>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/select_main" />
+
+    <!-- android:background="@drawable/titlelines" -->
+
+    <ListView
+        android:id="@+id/itemsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/applause_beta_dialog_header_background"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <com.applause.android.ui.MontserratTextView
+        android:id="@+id/applause_forgot_passcode_action_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center_vertical"
+        android:text="@string/applause_login_beta_go_back"
+        android:textColor="@color/applause_beta_forgot_passcode" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/applause_paleGrey" />
+
+    <com.applause.android.ui.MontserratTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/applause_login_beta_get_passcode_label"
+        android:textColor="@color/applause_input_text"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/applause_forgot_passcode_edit"
+        style="@style/applause_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/applause_login_username_hint"
+        android:inputType="text|textEmailAddress"
+        android:textColorHint="@color/applause_input_hint"
+        android:textStyle="bold" />
+
+    <com.applause.android.ui.MontserratButton
+        android:id="@+id/applause_forgot_passcode_action"
+        style="@style/applause_button"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/applause_button"
+        android:text="@string/applause_login_beta_get_passcode_button" />
+
+
+</LinearLayout><!-- From: file:/Users/rudy/dev/projects/AH-Android-Lib/applause-lib/src/main/res/layout/applause_login_forgot_passcode.xml -->

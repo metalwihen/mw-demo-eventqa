@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="#fff">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/button1"
+        android:layout_below="@+id/mid"
+        android:paddingRight="10dp"
+        android:scaleType="fitEnd"
+        android:src="@drawable/logo" />
+
+    <View
+        android:id="@+id/mid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_white"
+        android:text="@string/enter_text"
+        android:textColor="@color/select_darker" />
+
+    <ScrollView
+        android:id="@+id/scrollview1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/mid"
+        android:layout_alignParentTop="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/callout" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left|top"
+                android:padding="10dp"
+                android:text="@string/splash_text"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/select_darker" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

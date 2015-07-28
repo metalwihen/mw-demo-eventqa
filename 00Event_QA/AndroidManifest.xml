@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.metalwihen.demo.eventqa"
+    android:versionCode="12"
+    android:versionName="1B" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <!-- Permissions -->
+    <permission
+        android:name="com.metalwihen.demo.eventqa.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.ibm.bluelist.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name="com.metalwihen.demo.eventqa.EventApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.metalwihen.demo.eventqa.Splash"
+            android:label="@string/app_name"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- Push Settings Start -->
+            <!-- Notification Intent -->
+            <intent-filter>
+                <action android:name="com.metalwihen.demo.eventqa.IBMPushNotification" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.metalwihen.demo.eventqa.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <!-- Quality assurance application activities -->
+        <activity android:name="com.ibm.mqa.ui.ProblemActivity" />
+        <activity android:name="com.ibm.mqa.ui.FeedbackActivity" />
+        <activity android:name="com.ibm.mqa.ui.ScreenshotEditorActivity" />
+
+        <!-- Add GCM Intent Service and intent-filters for RECEIVE and REGISTRATION of notifications -->
+        <activity android:name="com.ibm.mobile.services.push.IBMUIActivity" />
+
+        <service android:name="com.ibm.mobile.services.push.IBMPushIntentService" />
+
+        <receiver
+            android:name="com.ibm.mobile.services.push.IBMPushBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.ibm.mbaas.push.sdk.client.android.sample" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.ibm.mbaas.push.sdk.client.android.sample" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Push Settings End -->
+
+    </application>
+
+</manifest>

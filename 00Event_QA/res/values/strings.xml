@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Event Q&amp;A</string>
+    <string name="splash_text">Event Q&amp;A is a Demo App which uses IBM Bluemix MobileFirst Platform.\n\nDuring an Event, you can ask questions via this app, and the speaker can answer the questions all at once by the end of the event. </string>
+    <string name="event_text_hint">Type the unique Event TAG here</string>
+    <string name="enter_text">CONTINUE</string>
+    <string name="question_text">Type a question here</string>
+    <string name="send_report">Report Error</string>
+    <string name="refresh_list">Refresh</string>
+    
+</resources>
