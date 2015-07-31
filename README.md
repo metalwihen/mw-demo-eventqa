@@ -26,4 +26,4 @@ During an Event, users can ask questions via this app, and the speaker can answe
 ###More Info:
 
 + Download the App via Google Play: http://bit.ly/mw-eventqa
-+ Read the tutorial: http://bit.ly/ibmevangelist-demo
++ Read the tutorial: http://ibmevangelist.metalwihen.com/demo
